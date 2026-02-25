@@ -1,0 +1,10 @@
+C:\xampp\htdocs\ojs\cache
+C:\xampp\htdocs\ojs\cache\t_compile
+C:\xampp\htdocs\ojs\lib\pkp\classes\cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\doctrine\cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\doctrine\cache\lib\Doctrine\Common\Cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\doctrine\dbal\src\Cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\laravel\framework\src\Illuminate\Cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\laravel\framework\src\Illuminate\Contracts\Cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\psr\cache
+C:\xampp\htdocs\ojs\lib\pkp\lib\vendor\ramsey\uuid\build\cache
