@@ -1,0 +1,14 @@
+ojsdata.zip
+u610382372_ojs.sql
+*.zip
+*.sql
+*.log
+.DS_Store
+Thumbs.db
+backups/
+ojsdata/
+ojsdata_backup/
+cache/
+t_cache/
+t_compile/
+config.inc.php.production
