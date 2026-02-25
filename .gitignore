@@ -8,7 +8,7 @@ Thumbs.db
 backups/
 ojsdata/
 ojsdata_backup/
-cache/
-t_cache/
-t_compile/
+/cache/
+/t_cache/
+/t_compile/
 config.inc.php.production
