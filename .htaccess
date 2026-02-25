@@ -1,19 +1,4 @@
-# OJS Public Application File -- DO NOT EDIT
-# Options are: Indexes, FollowSymLinks
-Options FollowSymLinks
-
-# Security - prevent access to sensitive files
-<FilesMatch "\.(json|lock|md|sh|yaml|yml)$">
-    Require all denied
-</FilesMatch>
-
-# Rewrite engine
 RewriteEngine On
-
-# Workaround for some PHP installations (add or remove the '#' if needed)
-# Options +FollowSymlinks
-
-# If this is a repository/working copy, don't rewrite
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
