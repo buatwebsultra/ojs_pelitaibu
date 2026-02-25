@@ -1,8 +1,9 @@
 <?php
 // Database Search Tool for OJS
-include('config.inc.php');
-
-// Extract db settings from config.inc.php manually or use a simple parser
+// Database Search Tool for OJS
+// Do NOT include config.inc.php as it has exit; at the top
+$config_content = file_get_contents('config.inc.php');
+// Extract db settings from config.inc.php manually
 $config = parse_ini_file('config.inc.php', true);
 $dbHost = $config['database']['host'];
 $dbUser = $config['database']['username'];
