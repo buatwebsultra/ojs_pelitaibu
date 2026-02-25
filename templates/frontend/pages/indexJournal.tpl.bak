@@ -1,0 +1,129 @@
+{**
+ * templates/frontend/pages/indexJournal.tpl
+ *
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @brief Display the index page for a journal
+ *
+ * @uses $currentJournal Journal This journal
+ * @uses $journalDescription string Journal description from HTML text editor
+ * @uses $homepageImage object Image to be displayed on the homepage
+ * @uses $additionalHomeContent string Arbitrary input from HTML text editor
+ * @uses $announcements array List of announcements
+ * @uses $numAnnouncementsHomepage int Number of announcements to display on the
+ *       homepage
+ * @uses $issue Issue Current issue
+ *}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
+
+{* ===== HERO SECTION ===== *}
+<section class="premium-hero">
+	<div class="hero-overlay"></div>
+	<div class="hero-content" data-aos="fade-up">
+		<div class="hero-badge">Peer-Reviewed · Open Access · E-ISSN Terindeks</div>
+		<h1 class="hero-title">{$currentJournal->getLocalizedName()|escape}</h1>
+		{if $currentJournal->getLocalizedDescription()}
+			<p class="hero-subtitle">{$currentJournal->getLocalizedDescription()|strip_tags|truncate:500:"..."}</p>
+		{else}
+			<p class="hero-subtitle">Jurnal ilmiah berkualitas di bawah STIKES Pelita Ibu, Kendari. Berfokus pada pengembangan ilmu kesehatan dan kebidanan secara profesional.</p>
+		{/if}
+		<div class="hero-buttons">
+			<a href="{url page="about" op="submissions"}" class="hero-btn hero-btn-primary">
+				<span>📝</span> Submit Article
+			</a>
+			<a href="{url page="issue" op="archive"}" class="hero-btn hero-btn-secondary">
+				<span>📚</span> Browse Archives
+			</a>
+		</div>
+		{* Stats Badges *}
+		<div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+			<div class="hero-stat-item">
+				<span class="hero-stat-number">128+</span>
+				<span class="hero-stat-label">Artikel Terbit</span>
+			</div>
+			<div class="hero-stat-divider"></div>
+			<div class="hero-stat-item">
+				<span class="hero-stat-number">11</span>
+				<span class="hero-stat-label">Edisi / Volume</span>
+			</div>
+			<div class="hero-stat-divider"></div>
+			<div class="hero-stat-item">
+				<span class="hero-stat-number">526+</span>
+				<span class="hero-stat-label">Penulis</span>
+			</div>
+			<div class="hero-stat-divider"></div>
+			<div class="hero-stat-item">
+				<span class="hero-stat-number">4×</span>
+				<span class="hero-stat-label">Terbit / Tahun</span>
+			</div>
+		</div>
+		{* Social Links *}
+		<div class="social-links" data-aos="fade-up" data-aos-delay="300">
+			<a href="#" class="social-icon" title="Instagram"><span>📸</span></a>
+			<a href="#" class="social-icon" title="Twitter/X"><span>🐦</span></a>
+			<a href="#" class="social-icon" title="LinkedIn"><span>🔗</span></a>
+		</div>
+	</div>
+	<div class="hero-wave">
+		<svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+			<path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="#f4f6f8"/>
+		</svg>
+	</div>
+</section>
+{* ===== END HERO SECTION ===== *}
+
+<div class="page page_index_journal">
+
+	{* Quick Metrics *}
+	<div class="jpasaik-metrics" data-aos="fade-up">
+		<div class="metric-card">
+			<span class="metric-value">2.4 Days</span>
+			<span class="metric-label">Avg. Review Time</span>
+		</div>
+		<div class="metric-card">
+			<span class="metric-value">Open</span>
+			<span class="metric-label">Access Policy</span>
+		</div>
+		<div class="metric-card">
+			<span class="metric-value">100%</span>
+			<span class="metric-label">Peer Reviewed</span>
+		</div>
+		<div class="metric-card">
+			<span class="metric-value">Kesehatan</span>
+			<span class="metric-label">Focus Area</span>
+		</div>
+	</div>
+
+
+
+	{call_hook name="Templates::Index::journal"}
+
+	{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
+
+	{* Latest issue *}
+	{if $issue}
+		<section class="current_issue">
+			<h2>
+				{translate key="journal.currentIssue"}
+			</h2>
+			<div class="current_issue_title">
+				{$issue->getIssueIdentification()|strip_unsafe_html}
+			</div>
+			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
+			<a href="{url page="issue" op="archive"}" class="read_more">
+				{translate key="journal.viewAllIssues"}
+			</a>
+		</section>
+	{/if}
+
+	{* Additional Homepage Content *}
+	{if $additionalHomeContent}
+		<div class="additional_content">
+			{$additionalHomeContent}
+		</div>
+	{/if}
+</div><!-- .page -->
+
+{include file="frontend/components/footer.tpl"}

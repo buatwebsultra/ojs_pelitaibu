@@ -1,0 +1,89 @@
+/* ===== HEADER BANNER FULL-WIDTH ===== */
+
+/* Reset head wrapper untuk layout stacked */
+.pkp_head_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+}
+
+/* Area nama/logo jurnal - full width */
+.pkp_site_name_wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    float: none !important;
+}
+
+/* Area nama/logo jurnal - Centered with Gradient & Boxed */
+.pkp_site_name {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    /* Match styleSheet.css */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: linear-gradient(180deg, #011d3a 0%, #01243f 100%) !important;
+    min-height: 140px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    /* Match styleSheet.css */
+    border-radius: 12px 12px 0 0 !important;
+}
+
+/* Colorful Accent Top Border from Footer */
+.pkp_site_name::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #0076a3, #00a3cc, #0076a3) !important;
+    z-index: 10 !important;
+}
+
+/* Link bungkus gambar */
+.pkp_site_name a.is_img {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    z-index: 2 !important;
+}
+
+/* Gambar logo - contained and sharp */
+.pkp_site_name a.is_img img.header_banner_img,
+.pkp_site_name a.is_img img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 140px !important;
+    display: block !important;
+    object-fit: cover !important;
+}
+
+/* Navbar di bawah banner */
+.pkp_site_nav_menu {
+    width: 100% !important;
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+}
+
+/* Sembunyikan tombol toggle di desktop, tampilkan di mobile */
+.pkp_site_nav_toggle {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .pkp_site_nav_toggle {
+        display: block !important;
+    }
+}
+
+/* ===== END HEADER BANNER FULL-WIDTH ===== */

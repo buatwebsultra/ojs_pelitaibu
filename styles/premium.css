@@ -1,0 +1,761 @@
+/* ============================================================
+   OJS MODERN PREMIUM DESIGN SYSTEM
+   ============================================================ */
+:root {
+    --primary-color: #005f82;
+    --primary-light: #008cc0;
+    --accent-color: #00AEEF;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* --- Global Overrides --- */
+body {
+    background-color: var(--bg-body) !important;
+    font-family: var(--font-main) !important;
+    color: var(--text-main) !important;
+    line-height: 1.6 !important;
+}
+
+.pkp_structure_page {
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    background: #fff !important;
+    box-shadow: var(--shadow-premium) !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* --- Header & Navigation --- */
+.pkp_structure_head {
+    background: #005f82 !important;
+    padding: 0 !important;
+    border-bottom: 4px solid var(--accent-color) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.pkp_head_wrapper {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.pkp_site_name .is_img {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    min-height: 250px !important;
+}
+
+.pkp_site_name .is_img img {
+    max-height: 250px !important;
+    width: 100% !important;
+    max-width: 1160px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4)) !important;
+    transition: transform 0.5s ease-in-out !important;
+    border-radius: 0 0 15px 15px !important;
+}
+
+/* Glassmorphism Branding Card for Main Portal */
+.pkp_site_name_wrapper {
+    position: absolute !important;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(150%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 15px 40px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+    z-index: 20 !important;
+    white-space: nowrap !important;
+}
+
+.pkp_site_title {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 28px !important;
+    color: #fff !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    display: block !important;
+}
+
+.pkp_site_subtitle {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+}
+
+
+.pkp_site_name .is_img:hover img {
+    transform: scale(1.02) !important;
+}
+
+/* Glassmorphism Sticky Navbar */
+.pkp_site_nav_menu {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+#navigationPrimary {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#navigationPrimary>li>a {
+    color: #fff !important;
+    font-weight: 600 !important;
+    padding: 20px 25px !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+#navigationPrimary>li>a i {
+    font-size: 16px !important;
+    opacity: 0.8;
+}
+
+#navigationPrimary>li:hover>a {
+    color: var(--accent-color) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* --- Premium Hero --- */
+.premium-hero {
+    position: relative !important;
+    min-height: 500px !important;
+    background: #0f172a !important;
+    margin-bottom: 50px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    color: #fff !important;
+}
+
+.premium-hero .hero-overlay {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%) !important;
+    z-index: 1;
+}
+
+.brand-bg-image {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    opacity: 0.4 !important;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative !important;
+    z-index: 10;
+    max-width: 900px;
+    padding: 40px;
+}
+
+.hero-badge {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-title {
+    font-size: 54px !important;
+    font-weight: 900 !important;
+    margin-bottom: 20px !important;
+    letter-spacing: -1.5px !important;
+    line-height: 1.1 !important;
+}
+
+.hero-subtitle {
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-bottom: 35px !important;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-btn {
+    padding: 14px 28px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 14px !important;
+}
+
+.hero-btn-primary {
+    background: var(--accent-color) !important;
+    color: #fff !important;
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(0, 174, 239, 0.3) !important;
+}
+
+.hero-btn-secondary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.hero-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* --- Journal Grid Layout --- */
+.journal_grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
+    gap: 30px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 40px 0 !important;
+}
+
+/* --- Journal Cards (Site Index) --- */
+.journal_card {
+    background: #fff !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--border-color) !important;
+    overflow: hidden !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    /* Reset padding to handle image properly */
+    height: 100% !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.journal_card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: var(--shadow-premium) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.journal_card .thumb {
+    width: 100% !important;
+    height: 220px !important;
+    overflow: hidden !important;
+    background: #f1f5f9 !important;
+    position: relative !important;
+}
+
+.journal_card .thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.6s ease !important;
+}
+
+.journal_card:hover .thumb img {
+    transform: scale(1.1) !important;
+}
+
+.journal_card .thumb_overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%) !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+    z-index: 2 !important;
+}
+
+.journal_card:hover .thumb_overlay {
+    opacity: 1 !important;
+}
+
+.journal_card .body {
+    padding: 25px !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.journal_card h3 {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+    color: var(--primary-color) !important;
+    line-height: 1.3 !important;
+}
+
+.journal_card h3 a {
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: color 0.3s ease !important;
+}
+
+.journal_card h3 a:hover {
+    color: var(--accent-color) !important;
+}
+
+.journal_card .description {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: var(--text-muted) !important;
+    margin-bottom: 25px !important;
+    flex: 1 !important;
+}
+
+/* --- Buttons & Links in Journal Cards --- */
+.journal_card .footer_links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-top: auto !important;
+}
+
+.btn_primary,
+.btn_secondary,
+.btn_login,
+.btn_register {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.btn_primary {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+.btn_primary:hover {
+    background: var(--primary-light) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 95, 130, 0.3) !important;
+}
+
+.btn_secondary {
+    background: #f1f5f9 !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.btn_secondary:hover {
+    background: #e2e8f0 !important;
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.footer_links_sub {
+    width: 100% !important;
+    display: flex !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+    padding-top: 15px !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.btn_login,
+.btn_register {
+    font-size: 12px !important;
+    padding: 5px 0 !important;
+    color: var(--text-muted) !important;
+    background: transparent !important;
+}
+
+.btn_login:hover,
+.btn_register:hover {
+    color: var(--accent-color) !important;
+    background: transparent !important;
+}
+
+/* --- Hero Stats Refresh --- */
+.hero-stats {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    margin-top: 40px !important;
+    padding: 20px 40px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 50px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.mini-stat {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.mini-stat .val {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+}
+
+.mini-stat .lab {
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* --- Section Header Refresh --- */
+.section_header {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+.section_header h2 {
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    color: var(--primary-color) !important;
+    margin: 0 !important;
+}
+
+/* --- Mobile Fixes Extension --- */
+@media (max-width: 768px) {
+    .journal_grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 20px !important;
+        border-radius: 20px !important;
+        padding: 20px !important;
+    }
+}
+
+/* --- Footer --- */
+.premium-footer {
+    background: #0f172a !important;
+    color: #94a3b8 !important;
+    padding: 80px 40px 40px !important;
+    text-align: left !important;
+}
+
+.footer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 40px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.footer-col {
+    text-align: left !important;
+}
+
+.footer-col h4 {
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.footer-col a {
+    color: #94a3b8 !important;
+    text-decoration: none !important;
+    display: block !important;
+    margin-bottom: 12px !important;
+    font-size: 14px !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color) !important;
+}
+
+.footer-contact-item {
+    display: flex !important;
+    gap: 12px !important;
+    margin-bottom: 15px !important;
+    font-size: 14px !important;
+}
+
+.footer-contact-item i {
+    color: var(--accent-color) !important;
+    font-size: 16px !important;
+    margin-top: 3px !important;
+}
+
+.footer-bottom {
+    margin-top: 60px !important;
+    padding-top: 30px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    text-align: center !important;
+    font-size: 13px !important;
+}
+
+/* --- Article Cards (Summaries) --- */
+.obj_article_summary {
+    transition: all 0.3s ease !important;
+}
+
+.obj_article_summary:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.obj_article_summary .title a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* --- Global Typography & Layout --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif !important;
+    color: var(--primary-color);
+}
+
+.section_header h2 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+}
+
+.section_divider {
+    width: 80px !important;
+    height: 4px !important;
+    background: var(--accent-color) !important;
+    margin: 15px auto 0 !important;
+    border-radius: 10px !important;
+}
+
+/* --- OJS Core Element Overrides --- */
+.cmp_article_list {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 768px) {
+    .pkp_structure_page {
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .hero-title {
+        font-size: 32px !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+
+    .footer-col h4 {
+        justify-content: center !important;
+    }
+
+    .footer-contact-item {
+        justify-content: center !important;
+    }
+
+    .hero-stats-mini {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+}
+
+/* --- Portal Intro --- */
+.portal_intro {
+    max-width: 1000px !important;
+    margin: 40px auto 60px !important;
+    padding: 0 40px !important;
+    text-align: justify !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: var(--text-main) !important;
+    position: relative !important;
+}
+
+.portal_intro::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 10px !important;
+    top: 5px !important;
+    bottom: 5px !important;
+    width: 4px !important;
+    background: var(--accent-color) !important;
+    border-radius: 4px !important;
+}
+
+/* --- Premium Sidebar Blocks --- */
+.pkp_structure_sidebar .pkp_block {
+    background: #fff !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow-sm) !important;
+    margin-bottom: 30px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.pkp_structure_sidebar .pkp_block:hover {
+    box-shadow: var(--shadow-md) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.pkp_structure_sidebar .pkp_block .title {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    padding: 12px 18px !important;
+    margin: 0 !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    display: flex !important;
+    align-items: center !important;
+    border-bottom: 3px solid var(--accent-color) !important;
+}
+
+.pkp_structure_sidebar .pkp_block .content {
+    padding: 20px !important;
+}
+
+/* --- INDEXED Block Styling --- */
+.sidebar-flex-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    margin: 0 !important;
+}
+
+.sidebar-flex-grid .flex-item {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    min-height: 80px !important;
+    /* Increased height */
+}
+
+.sidebar-flex-grid .flex-item:hover {
+    background: #fff !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.sidebar-flex-grid .flex-item img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 90% !important;
+    max-height: 60px !important;
+    /* Larger max-height */
+    filter: grayscale(100%) opacity(0.8) !important;
+    transition: all 0.3s ease !important;
+    display: block !important;
+}
+
+.sidebar-flex-grid .flex-item:hover img {
+    filter: grayscale(0%) opacity(1) !important;
+}
+
+/* Add Lucide icon before titles if possible via CSS or template */
+.pkp_block_make_submission .title::before {
+    content: '\ea14';
+    font-family: 'lucide';
+    margin-right: 10px;
+    font-size: 16px;
+}
